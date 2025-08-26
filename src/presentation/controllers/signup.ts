@@ -1,6 +1,7 @@
 import type { HttpResponse, HttpRequest } from '../protocols/http'
 import { MissingParamError } from '../errors/missing-param-error'
 import { badRequest, success } from '../helpers/http-helpers'
+import { } from '../protocols/controller'
 
 export class SignUpController {
   handle (httpRequest: HttpRequest): HttpResponse {
