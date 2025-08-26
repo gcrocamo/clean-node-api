@@ -1,6 +1,6 @@
 import type { HttpResponse, HttpRequest } from '../protocols/http'
 import { MissingParamError } from '../errors/missing-param-error'
-import { badRequest } from '../helpers/http-helpers'
+import { badRequest, success } from '../helpers/http-helpers'
 
 export class SignUpController {
   handle (httpRequest: HttpRequest): HttpResponse {
@@ -10,9 +10,6 @@ export class SignUpController {
         return badRequest(new MissingParamError(field))
       }
     }
-    return {
-      statusCode: 200,
-      body: 'Sucess'
-    }
+    return success()
   }
 }
