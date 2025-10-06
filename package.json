@@ -9,7 +9,6 @@
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage"
-
   },
   "keywords": [],
   "author": "",
@@ -18,6 +17,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "@types/node": "^22.15.29",
+    "@types/validator": "^13.15.3",
     "eslint": "^8.57.1",
     "eslint-config-standard-with-typescript": "^43.0.1",
     "git-commit-msg-linter": "^5.0.8",
@@ -27,5 +27,8 @@
     "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "validator": "^13.15.15"
   }
 }
