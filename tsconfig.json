@@ -11,7 +11,9 @@
         "typeRoots": ["./node_modules/@types"]
     },
     "include": [
-        "src/**/*"
+        "src/**/*",
+        "jest-unit-config.js",
+        "jest-integration-config.js"
     ],
     "exclude": [
         "node_modules",
