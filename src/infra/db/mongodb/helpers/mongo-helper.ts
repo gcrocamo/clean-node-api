@@ -1,4 +1,5 @@
-import { Collection, MongoClient } from 'mongodb'
+import { MongoClient } from 'mongodb'
+import type { Collection } from 'mongodb'
 
 export const MongoHelper = {
   client: null as unknown as MongoClient,
