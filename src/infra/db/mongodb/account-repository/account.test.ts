@@ -4,7 +4,7 @@ import { AccountMongoRepository } from './account'
 describe('Account Mongo Repository', () => {
   beforeAll(async () => {
     await MongoHelper.connect(process.env.MONGO_URL!)
-  })
+  }, 30000) // ← Aumentar timeout para 30 segundos (primeira vez baixa o binário)
   afterAll(async () => {
     await MongoHelper.disconnect()
   })
@@ -27,7 +27,7 @@ describe('Account Mongo Repository', () => {
     expect(account).toBeTruthy()
     expect(account.id).toBeTruthy()
     expect(account.name).toBe('any_name')
-    expect(account.name).toBe('any_email@mail.com')
-    expect(account.name).toBe('any_password')
+    expect(account.email).toBe('any_email@mail.com')
+    expect(account.password).toBe('any_password')
   })
 })
