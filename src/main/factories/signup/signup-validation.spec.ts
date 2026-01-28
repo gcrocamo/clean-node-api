@@ -1,10 +1,7 @@
 import { makeSignupValidation } from './signup-validation'
-import { ValidationComposite } from '../../../presentation/helpers/validators/validation-composite'
-import { RequiredFieldValidation } from '../../../presentation/helpers/validators/required-fields-validation'
 import type { Validation } from '../../../presentation/protocols/validation'
-import { CompareFieldValidation } from '../../../presentation/helpers/validators/compare-fields-validation'
-import { EmailValidation } from '../../../presentation/helpers/validators/email-validation'
 import type { EmailValidator } from '../../../presentation/protocols/email-validator'
+import { ValidationComposite, RequiredFieldValidation, EmailValidation, CompareFieldValidation } from '../../../presentation/helpers/validators'
 
 jest.mock('../../../presentation/helpers/validators/validation-composite')
 
