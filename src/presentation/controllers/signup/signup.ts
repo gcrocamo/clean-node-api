@@ -1,4 +1,4 @@
-import { badRequest, serverError, success } from '../../helpers/http-helpers'
+import { badRequest, serverError, success } from '../../helpers/http/http-helpers'
 import type { Controller, HttpRequest, HttpResponse, AddAccount, Validation } from './signup-protocols'
 
 export class SignUpController implements Controller {
@@ -14,7 +14,7 @@ export class SignUpController implements Controller {
     try {
       const error = this.validation.validate(httpRequest.body)
       if (error) {
-        return badRequest(error as Error)
+        return badRequest(error)
       }
       const { name, email, password } = httpRequest.body
       const account = await this.addAccount.add({
